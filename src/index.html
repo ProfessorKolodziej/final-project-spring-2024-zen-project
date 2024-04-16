@@ -6,19 +6,119 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Update your description here" />
-	<title>Update your title here</title>
+	<title>BE ZEN
+	</title>
 	<!--
 		This is where you should link your CSS file.
 	-->
 </head>
 
+<video controls width="250">
+	<source src="/media/cc0-videos/flower.webm" type="video/webm" />
+  
+	<source src="/media/cc0-videos/flower.mp4" type="video/mp4" />
+  
+	Download the
+	<a href="/media/cc0-videos/flower.webm">WEBM</a>
+	or
+	<a href="/media/cc0-videos/flower.mp4">MP4</a>
+	video.
+  </video>
+
+  
 <body>
 	<main class="content-container">
-		<h1>Welcome to your final project!</h1>
+		<h1>BE ZEN</h1>
 	</main>
+
+
+	<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen Affirmation Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Zen Affirmation Generator</h1>
+        <div class="affirmation-container" id="affirmationContainer">
+            <p class="affirmation" id="affirmation">Click the button below to generate an affirmation.</p>
+        </div>
+        <button onclick="generateAffirmation()">Generate Affirmation</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Random Quote Generator</h1>
+        <div class="quote-container" id="quoteContainer">
+            <p class="quote" id="quote">Click the button below to generate a quote.</p>
+        </div>
+        <button onclick="generateQuote()">Generate Quote</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
 	<!--
 		This is where you should link your JS file.
 	-->
 </body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation Video Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Meditation Video Player</h1>
+        <div class="options">
+            <label for="location">Select Location:</label>
+            <select id="location">
+                <option value="beach">Beach</option>
+                <option value="mountain">Mountain</option>
+                <option value="forest">Forest</option>
+                <option value="waterfall">Waterfall</option>
+            </select>
+
+            <label for="duration">Select Duration:</label>
+            <select id="duration">
+                <option value="30">30 seconds</option>
+                <option value="60">1 minute</option>
+                <option value="300">5 minutes</option>
+            </select>
+        </div>
+
+        <div class="video-container">
+            <video id="meditationVideo" controls>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <button onclick="playMeditation()">Play Meditation</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
 </html>

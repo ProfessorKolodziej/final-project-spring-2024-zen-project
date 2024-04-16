@@ -10,6 +10,153 @@ primary color variable below.
 	--color-secondary: #c00;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.affirmation-container {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h1 {
+    color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.quote-container {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h1 {
+    color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.options {
+    margin-bottom: 20px;
+}
+
+.video-container {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h1 {
+    color: #333;
+}
+
+function playMeditation() {
+    const location = document.getElementById("location").value;
+    const duration = parseInt(document.getElementById("duration").value);
+    const videoElement = document.getElementById("meditationVideo");
+
+    let videoSrc = '';
+
+    switch (location) {
+        case 'beach':
+            videoSrc = 'beach_meditation.mp4';
+            break;
+        case 'mountain':
+            videoSrc = 'mountain_meditation.mp4';
+            break;
+        case 'forest':
+            videoSrc = 'forest_meditation.mp4';
+            break;
+        case 'waterfall':
+            videoSrc = 'waterfall_meditation.mp4';
+            break;
+        default:
+            videoSrc = '';
+            break;
+    }
+
+    videoElement.src = videoSrc;
+
+    setTimeout(function() {
+        videoElement.pause();
+    }, duration * 1000);
+}
+
 /*
 CSS doesn't allow variables to be used in media
 queries just yet, but you can use these values
