@@ -1,0 +1,73 @@
+/* CSS controls the styling of the page.
+You can write a color directly or use variables.
+Try changing the color from blue to red in the
+primary color variable below. */
+
+/* Define color variables */
+:root {
+    --color-primary: blue;
+    --color-secondary: #c00;
+}
+
+/* Global styles */
+body {
+    font-family: "Poiret One", sans-serif; /* Apply font-family to the entire body */
+    font-weight: 400; /* Specify font-weight */
+    font-style: normal; /* Specify font-style */
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Styles for affirmation, quote, options, and video containers */
+.affirmation-container,
+.quote-container,
+.options,
+.video-container {
+    margin-top: 20px;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Default button background color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button hover state */
+button:hover {
+    background-color: #0056b3; /* Button background color on hover */
+}
+
+/* Heading styles */
+h1 {
+    color: var(--color-primary); /* Use the primary color variable for h1 */
+}
+
+/* Media query for smaller screens */
+@media screen and (min-width: 320px) {
+    .content-container {
+        margin: 0 auto;
+        max-width: 768px; /* Adjust max-width for smaller screens */
+    }
+}
+
+/* Ensure images and videos are responsive */
+video, img {
+    max-width: 100%;
+}
+
+/* Limit maximum width of video containers */
+.video-container {
+    max-width: 200px;
+}
