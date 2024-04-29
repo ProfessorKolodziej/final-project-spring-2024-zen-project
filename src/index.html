@@ -8,82 +8,74 @@
     <title>BE ZEN</title>
     <!-- Link your CSS file -->
     <link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poiret+One&display=swap" rel="stylesheet">
+
 </head>
 <body>
-	
-	<img src="images/ZenPic.jpg" alt="ZenPic">
-
+    <!-- Zen image -->
+    <img src="images/ZenPic.jpg" alt="ZenPic">
 
     <main class="content-container">
-        <h1>BE ZEN!</h1>
+        <h1>BE ZEN</h1>
     </main>
 
     <div class="container">
-        <h1>Zen Affirmation Generator</h1>
+        <h2>Zen Affirmation Generator</h2>
         <div class="affirmation-container" id="affirmationContainer">
             <p class="affirmation" id="affirmation">Click the button below to generate an affirmation.</p>
+            <button id="generateAffirmationButton">Generate Affirmation</button>
         </div>
-        <button onclick="generateAffirmation()">Generate Affirmation</button>
-    </div>
 
-    <div class="container">
-        <h1>Random Quote Generator</h1>
-        <div class="quote-container" id="quoteContainer">
-            <p class="quote" id="quote">Click the button below to generate a quote.</p>
-        </div>
-        <button onclick="generateQuote()">Generate Quote</button>
     </div>
-
     <div class="container">
-        <h1>Meditation Video Player</h1>
+        <h2>Meditation Video Player</h2s>
         <div class="options">
+            <!-- Radio buttons for selecting image -->
             <label>
-                <input type="radio" name="location" value="beach"> Beach image
+                <input type="radio" id="beach" name="location" value="beach" checked="checked"> Beach
             </label>
             <label>
-                <input type="radio" name="location" value="mountain"> Mountain image
+                <input type="radio" id="forest" name="location" value="forest"> Forest
             </label>
             <label>
-                <input type="radio" name="location" value="forest"> Forest image
+                <input type="radio" id="mountain" name="location" value="mountain"> Mountain
             </label>
             <label>
-                <input type="radio" name="location" value="waterfall"> Waterfall image
+                <input type="radio" id="waterfall" name="location" value="waterfall"> Waterfall
             </label>
-            <label for="duration">Select Duration:</label>
-            <select id="duration">
-                <option value="30">30 seconds</option>
-                <option value="60">1 minute</option>
-                <option value="300">5 minutes</option>
-            </select>
+    
         </div>
 
-        <!-- Additional video containers with their respective sources -->
-        <!-- Ensure correct source paths -->
+        <!-- Video containers with their respective sources -->
         <div class="video-container">
-            <video id="meditationVideo1" controls>
+            <video id="meditationVideobeach" controls>
                 <source src="videos/beach.mp4" type="video/mp4">
             </video>
         </div>
 
         <div class="video-container">
-            <video id="meditationVideo2" controls>
+            <video id="meditationVideoforest" controls>
                 <source src="videos/forest.mp4" type="video/mp4">
             </video>
         </div>
 
         <div class="video-container">
-            <video id="meditationVideo3" controls>
+            <video id="meditationVideomountain" controls>
                 <source src="videos/mountain.mp4" type="video/mp4">
             </video>
         </div>
 
         <div class="video-container">
-            <video id="meditationVideo4" controls>
+            <video id="meditationVideowaterfall" controls>
                 <source src="videos/waterfall.mp4" type="video/mp4">
             </video>
         </div>
 
-        <button onclick="playMeditation()">Play Meditation</button>
+        <!-- Button to trigger meditation playback -->
+        <button id="playMeditationButton">Play Meditation Video</button>
     </div>
 
     <!-- Link your JavaScript file -->

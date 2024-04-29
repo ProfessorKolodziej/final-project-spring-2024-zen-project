@@ -30,7 +30,7 @@
     "cross-env": "^7.0.3",
     "eslint": "^8.43.0",
     "file-loader": "^6.2.0",
-    "gh-pages": "^5.0.0",
+    "gh-pages": "^6.1.1",
     "live-server": "^1.2.2",
     "stylelint": "^15.8.0",
     "stylelint-config-standard": "^34.0.0"

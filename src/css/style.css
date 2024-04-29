@@ -1,28 +1,36 @@
-/* CSS controls the styling of the page.
-You can write a color directly or use variables.
-Try changing the color from blue to red in the
-primary color variable below. */
-
-/* Define color variables */
 :root {
-    --color-primary: blue;
+    --color-primary: #ff6347; /* Red */
     --color-secondary: #c00;
 }
 
 /* Global styles */
 body {
-    font-family: "Poiret One", sans-serif; /* Apply font-family to the entire body */
-    font-weight: 400; /* Specify font-weight */
-    font-style: normal; /* Specify font-style */
+    font-family: "Poiret One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     margin: 0;
     padding: 0;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    text-align: center; /* Center align text */
+    background-color: #f8f9fa; /* Light gray background */
+    line-height: 1.5; /* Improved readability */
+} 
+h1,h2 {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center align text */
+    background-color: #f8f9fa; /* Light gray background */
+    line-height: 1.5; /* Improved readability */
 }
-
 .container {
-    text-align: center;
+    max-width: 90%; /* Limit container width */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 100px; /* Add padding for spacing */
+    background-color: #fff; /* White background for container */
+    border-radius: 8px; /* Rounded corners for container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
 /* Styles for affirmation, quote, options, and video containers */
@@ -35,29 +43,46 @@ body {
 
 /* Button styles */
 button {
-    padding: 10px 20px;
-    background-color: #007bff; /* Default button background color */
+    padding: 8px 16px;
+    background-color: var(--color-primary);
     color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
 }
 
 /* Button hover state */
 button:hover {
-    background-color: #0056b3; /* Button background color on hover */
+    background-color: #ff4500; /* Darker red on hover */
 }
 
 /* Heading styles */
 h1 {
-    color: var(--color-primary); /* Use the primary color variable for h1 */
+    color: var(--color-primary);
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--color-primary);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: var(--color-primary);
+    font-size: 19px;
+    margin-bottom: 20px;
+    font-family: "Lato", sans-serif; /* Apply Lato font directly to p element */
+    font-weight: 300; /* Set font weight to 300 for light */
+    font-style: normal; /* Set font style to normal */
 }
 
 /* Media query for smaller screens */
 @media screen and (min-width: 320px) {
-    .content-container {
-        margin: 0 auto;
+    .container {
         max-width: 768px; /* Adjust max-width for smaller screens */
     }
 }
@@ -67,7 +92,7 @@ video, img {
     max-width: 100%;
 }
 
-/* Limit maximum width of video containers */
+/* Hide all video containers by default */
 .video-container {
-    max-width: 200px;
+    display: none;
 }

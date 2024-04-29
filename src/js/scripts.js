@@ -1,11 +1,4 @@
-// This is where you should write all JavaScript
-// for your project. Remember a few things as you start!
-// - Use let or const for all variables
-// - Do not use jQuery - use JavaScript instead
-// - Do not use onclick - use addEventListener instead
-// - Run npm run test regularly to check autograding
-// - You'll need to link this file to your HTML :)
-
+// Define the array of affirmations
 const affirmations = [
     "I am at peace with all that has happened, is happening, and will happen.",
     "I trust the journey of life and know that I am exactly where I need to be.",
@@ -18,12 +11,14 @@ const affirmations = [
     "I choose to let go of fear and embrace love."
 ];
 
+// Define the function to generate affirmations
 function generateAffirmation() {
     const randomIndex = Math.floor(Math.random() * affirmations.length);
     const affirmationElement = document.getElementById("affirmation");
     affirmationElement.textContent = affirmations[randomIndex];
 }
 
+// Define the array of quotes
 const quotes = [
     "The only way to do great work is to love what you do. - Steve Jobs",
     "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
@@ -37,8 +32,35 @@ const quotes = [
     "Life is 10% what happens to us and 90% how we react to it. - Charles R. Swindoll"
 ];
 
+// Define the function to generate quotes
 function generateQuote() {
     const randomIndex = Math.floor(Math.random() * quotes.length);
     const quoteElement = document.getElementById("quote");
     quoteElement.textContent = quotes[randomIndex];
 }
+
+// Define the function to play meditation
+function playMeditation() {
+    console.log("Something")
+    const location = document.querySelector('input[name="location"]:checked').value;
+
+    // Hide all videos
+    const videos = document.querySelectorAll('.video-container');
+    videos.forEach(video => {
+        video.style.display = 'none';
+    });
+
+    // Show the selected video
+    console.log(`meditationVideo${location}`)
+    const videoElement = document.getElementById(`meditationVideo${location}`);
+    videoElement.parentElement.style.display = 'block';
+
+    // Play the selected video
+    videoElement.play();
+}
+
+// Add event listener to the button after the DOM is loaded
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("generateAffirmationButton").addEventListener("click", generateAffirmation);
+    document.getElementById("playMeditationButton").addEventListener("click", playMeditation);
+});
