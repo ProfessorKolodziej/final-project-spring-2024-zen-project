@@ -64,3 +64,14 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("generateAffirmationButton").addEventListener("click", generateAffirmation);
     document.getElementById("playMeditationButton").addEventListener("click", playMeditation);
 });
+
+// Define the function to mute all videos
+function muteAllVideos() {
+    const videos = document.getElementsByTagName('video');
+    for (let i = 0; i < videos.length; i++) {
+        videos[i].muted = true;
+    }
+}
+
+// Call the function to mute all videos
+muteAllVideos();
