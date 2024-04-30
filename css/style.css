@@ -13,12 +13,22 @@ body {
     text-align: center; /* Center align text */
     background-color: #f8f9fa; /* Light gray background */
     line-height: 1.5; /* Improved readability */
+    margin-bottom: 100px; /* Add margin at the bottom */
+} 
+h1,h2 {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center align text */
+    background-color: #f8f9fa; /* Light gray background */
+    line-height: 1.5; /* Improved readability */
 }
-
 .container {
     max-width: 90%; /* Limit container width */
     margin: 0 auto; /* Center the container horizontally */
-    padding: 20px; /* Add padding for spacing */
+    padding: 30px; /* Add padding for spacing */
     background-color: #fff; /* White background for container */
     border-radius: 8px; /* Rounded corners for container */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
@@ -40,8 +50,11 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 20px;
     transition: background-color 0.3s ease;
+    font-family: "Lato", sans-serif; /* Apply Lato font directly to p element */
+    font-weight: 300; /* Set font weight to 300 for light */
+    font-style: normal; /* Set font style to normal */
 }
 
 /* Button hover state */
@@ -52,8 +65,23 @@ button:hover {
 /* Heading styles */
 h1 {
     color: var(--color-primary);
-    font-size: 24px;
+    font-size: 50px;
     margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--color-primary);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: var(--color-primary);
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: "Lato", sans-serif; /* Apply Lato font directly to p element */
+    font-weight: 300; /* Set font weight to 300 for light */
+    font-style: normal; /* Set font style to normal */
 }
 
 /* Media query for smaller screens */
@@ -66,9 +94,31 @@ h1 {
 /* Ensure images and videos are responsive */
 video, img {
     max-width: 100%;
+    margin-top: 25px;
 }
 
-/* Limit maximum width of video containers */
+/* Hide all video containers by default */
 .video-container {
-    max-width: 200px;
+    display: none;
+}
+
+label {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin-right: 10px; /* Add some space between labels */
+    color: var(--color-primary); /* Use the same text color as the rest of the text */
+    font-size: 27px; /* Set the font size to 27 pixels */
+    border: 1px solid var(--color-primary); /* Add a 1px solid border with the same color as the text */
+    padding: 5px; /* Add some padding inside the border */
+    box-sizing: border-box; /* Include padding in the total width/height of the element */
+}
+
+label img {
+    max-width: 10%; /* Limit image width */
+    margin-right: 10px; /* Add some space between image and text */
+}
+
+.options {
+    margin-bottom: 30px; /* Add more space between the labels and the button */
 }

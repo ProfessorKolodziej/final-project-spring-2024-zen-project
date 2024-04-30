@@ -41,8 +41,8 @@ function generateQuote() {
 
 // Define the function to play meditation
 function playMeditation() {
+    console.log("Something")
     const location = document.querySelector('input[name="location"]:checked').value;
-    const duration = parseInt(document.getElementById("duration").value);
 
     // Hide all videos
     const videos = document.querySelectorAll('.video-container');
@@ -51,16 +51,12 @@ function playMeditation() {
     });
 
     // Show the selected video
+    console.log(`meditationVideo${location}`)
     const videoElement = document.getElementById(`meditationVideo${location}`);
-    videoElement.style.display = 'block';
+    videoElement.parentElement.style.display = 'block';
 
     // Play the selected video
     videoElement.play();
-
-    // Pause the video after the specified duration
-    setTimeout(function() {
-        videoElement.pause();
-    }, duration * 1000);
 }
 
 // Add event listener to the button after the DOM is loaded

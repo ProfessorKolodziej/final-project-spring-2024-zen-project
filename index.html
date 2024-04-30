@@ -8,6 +8,11 @@
     <title>BE ZEN</title>
     <!-- Link your CSS file -->
     <link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poiret+One&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <!-- Zen image -->
@@ -18,53 +23,57 @@
     </main>
 
     <div class="container">
-        <h1>Zen Affirmation Generator</h1>
+        <h2>Zen Affirmation Generator</h2>
         <div class="affirmation-container" id="affirmationContainer">
             <p class="affirmation" id="affirmation">Click the button below to generate an affirmation.</p>
+            <button id="generateAffirmationButton">Generate Affirmation</button>
         </div>
 
     </div>
-    <button id="generateAffirmationButton">Generate Affirmation</button>
     <div class="container">
-        <h1>Meditation Video Player</h1>
+        <h2>Meditation Video Player</h2>
         <div class="options">
             <!-- Radio buttons for selecting image -->
             <label>
-                <input type="radio" id="beach" name="location" value="beach"> Beach
+                <input type="radio" id="beach" name="location" value="beach" checked="checked">
+                <img src="images/beachimage.jpg" alt="beachimage"> Beach
             </label>
             <label>
-                <input type="radio" id="forest" name="location" value="forest"> Forest
+                <input type="radio" id="forest" name="location" value="forest">
+                <img src="images/forestimage.jpg" alt="forestimage"> Forest
             </label>
             <label>
-                <input type="radio" id="mountain" name="location" value="mountain"> Mountain
+                <input type="radio" id="mountain" name="location" value="mountain">
+                <img src="images/mountainimage.jpg" alt="mountainimage"> Mountain
             </label>
             <label>
-                <input type="radio" id="waterfall" name="location" value="waterfall"> Waterfall
+                <input type="radio" id="waterfall" name="location" value="waterfall">     
+                <img src="images/waterfallimage.jpg" alt="waterfallimage"> Waterfall
             </label>
     
         </div>
 
         <!-- Video containers with their respective sources -->
         <div class="video-container">
-            <video id="meditationVideo1" controls>
+            <video id="meditationVideobeach" controls>
                 <source src="videos/beach.mp4" type="video/mp4">
             </video>
         </div>
 
         <div class="video-container">
-            <video id="meditationVideo2" controls>
+            <video id="meditationVideoforest" controls>
                 <source src="videos/forest.mp4" type="video/mp4">
             </video>
         </div>
 
         <div class="video-container">
-            <video id="meditationVideo3" controls>
+            <video id="meditationVideomountain" controls>
                 <source src="videos/mountain.mp4" type="video/mp4">
             </video>
         </div>
 
         <div class="video-container">
-            <video id="meditationVideo4" controls>
+            <video id="meditationVideowaterfall" controls>
                 <source src="videos/waterfall.mp4" type="video/mp4">
             </video>
         </div>
