@@ -41,7 +41,6 @@ function generateQuote() {
 
 // Define the function to play meditation
 function playMeditation() {
-    console.log("Something")
     const location = document.querySelector('input[name="location"]:checked').value;
 
     // Hide all videos
@@ -51,9 +50,15 @@ function playMeditation() {
     });
 
     // Show the selected video
-    console.log(`meditationVideo${location}`)
     const videoElement = document.getElementById(`meditationVideo${location}`);
     videoElement.parentElement.style.display = 'block';
+
+    // Mute the video if it's the waterfall video
+    if (location === 'waterfall') {
+        videoElement.muted = true;
+    } else {
+        videoElement.muted = false;
+    }
 
     // Play the selected video
     videoElement.play();
@@ -65,13 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("playMeditationButton").addEventListener("click", playMeditation);
 });
 
-// Define the function to mute all videos
-function muteAllVideos() {
-    const videos = document.getElementsByTagName('video');
-    for (let i = 0; i < videos.length; i++) {
-        videos[i].muted = true;
-    }
-}
 
-// Call the function to mute all videos
-muteAllVideos();
+
+
+
